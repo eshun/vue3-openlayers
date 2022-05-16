@@ -38,6 +38,7 @@ export default {
             minPoints,
             finishCondition,
             geometryFunction,
+            style,
             geometryName,
             condition,
             freehand,
@@ -63,6 +64,7 @@ export default {
                 freehand: freehand.value,
                 freehandCondition: freehandCondition.value,
                 wrapX: wrapX.value,
+                style: style.value,
 
             });
 
@@ -89,6 +91,7 @@ export default {
             minPoints,
             finishCondition,
             geometryFunction,
+            style,
             geometryName,
             condition,
             freehand,
@@ -149,6 +152,10 @@ export default {
 
         },
         geometryFunction: {
+            type: Function,
+
+        },
+        style: {
             type: Function,
 
         },

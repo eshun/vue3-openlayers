@@ -34,6 +34,7 @@ export default {
             features,
             condition,
             deleteCondition,
+            style,
             insertVertexCondition,
             pixelTolerance,
             wrapX,
@@ -51,6 +52,8 @@ export default {
                 pixelTolerance: pixelTolerance.value,
                 wrapX: wrapX.value,
                 hitDetection: hitDetection.value,
+                style: style.value,
+
             });
 
             modify.on('modifystart', (event) => {
@@ -70,6 +73,7 @@ export default {
         watch([condition,
             deleteCondition,
             insertVertexCondition,
+            style,
             pixelTolerance,
             wrapX,
             hitDetection
@@ -100,6 +104,10 @@ export default {
 
         },
         deleteCondition: {
+            type: Function,
+
+        },
+        style: {
             type: Function,
 
         },

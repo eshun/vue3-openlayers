@@ -30,11 +30,13 @@ export default {
         const {
             properties
         } = usePropsAsObjectProperties(props);
+        if(!properties.style){
+            properties.style = new Style();
+        }
 
         let select = computed(() => {
             let s = new Select({
-                ...properties,
-                style: new Style()
+                ...properties
             });
             s.on('select', (event) => {
                 emit('select', event)
@@ -73,6 +75,10 @@ export default {
             default: false
         },
         condition: {
+            type: Function,
+
+        },
+        style: {
             type: Function,
 
         },
